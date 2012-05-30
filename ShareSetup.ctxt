@@ -1,0 +1,4 @@
+#BlueJ class context
+comment0.params=configPath\ PLport\ SPport\ PCport\ CLport\ FTport\ SFTport
+comment0.target=ShareSetup(java.lang.String,\ int,\ int,\ int,\ int,\ int,\ int)
+numComments=1

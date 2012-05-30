@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=me\ port\ fList\ uList\ sharePath\ inter
+comment0.target=FileListener(User,\ int,\ FileList,\ UserList,\ java.lang.String,\ ShareInterface)
+comment1.params=socket\ reader\ writer
+comment1.target=void\ connection(java.net.Socket,\ java.io.BufferedReader,\ java.io.PrintWriter)
+comment2.params=reader\ writer
+comment2.target=java.io.InputStream\ getFile(java.io.BufferedReader,\ java.io.PrintWriter)
+comment3.params=file
+comment3.target=java.io.InputStream\ getStream(java.io.File)
+comment4.params=
+comment4.target=void\ endSenders()
+comment5.params=
+comment5.target=void\ stopListener()
+numComments=6

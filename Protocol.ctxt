@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=reader\ writer
+comment0.target=Protocol(java.io.BufferedReader,\ java.io.PrintWriter)
+comment1.params=
+comment1.target=void\ sendProtocol()
+comment2.params=
+comment2.target=void\ checkProtocol()
+numComments=3

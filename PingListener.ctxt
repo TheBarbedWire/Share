@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=port\ inter
+comment0.target=PingListener(int,\ ShareInterface)
+comment1.params=socket\ reader\ writer
+comment1.target=void\ connection(java.net.Socket,\ java.io.BufferedReader,\ java.io.PrintWriter)
+numComments=2

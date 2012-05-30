@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DownloadArea()
+comment1.params=handle
+comment1.target=void\ addDownloadBar(ShareHandle)
+comment2.params=handle
+comment2.target=void\ addUploadBar(ShareHandle)
+comment3.params=handle
+comment3.target=void\ removeBar(ShareHandle)
+comment4.params=handle\ percent
+comment4.target=void\ tickProgress(ShareHandle,\ int)
+numComments=5

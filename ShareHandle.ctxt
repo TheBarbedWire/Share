@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=text
+comment0.target=ShareHandle(java.lang.String)
+comment1.params=text\ user
+comment1.target=ShareHandle(java.lang.String,\ User)
+comment2.params=text\ message
+comment2.target=ShareHandle(java.lang.String,\ java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getText()
+comment4.params=
+comment4.target=java.lang.String\ getMessage()
+comment5.params=message
+comment5.target=void\ setMessage(java.lang.String)
+comment6.params=
+comment6.target=User\ getUser()
+comment7.params=user
+comment7.target=void\ setUser(User)
+numComments=8

@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=owner\ title\ share
+comment0.target=SettingsDialog(java.awt.Frame,\ java.lang.String,\ Share)
+comment1.params=
+comment1.target=void\ createFrame()
+comment2.params=
+comment2.target=void\ addItems()
+comment3.params=e
+comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment4.params=
+comment4.target=java.lang.String\ getFolderDialog()
+comment5.params=
+comment5.target=void\ readConfigStates()
+comment6.params=
+comment6.target=void\ saveConfigStates()
+numComments=7

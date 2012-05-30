@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=port\ IP\ interval\ inter
+comment0.target=Pinger(int,\ java.lang.String,\ int,\ ShareInterface)
+comment1.params=port\ IP\ inter
+comment1.target=Pinger(int,\ java.lang.String,\ ShareInterface)
+comment2.params=
+comment2.target=void\ run()
+comment3.params=
+comment3.target=void\ endPinger()
+comment4.params=
+comment4.target=void\ pingFailed()
+numComments=5

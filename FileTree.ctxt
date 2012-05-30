@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.params=root\ share
+comment0.target=FileTree(java.lang.String,\ Share)
+comment1.params=users
+comment1.target=void\ addUsers(User[])
+comment10.params=list\ rootNode\ user
+comment10.target=void\ fillTreeBranch(FileList,\ javax.swing.tree.DefaultMutableTreeNode,\ User)
+comment11.params=e
+comment11.target=void\ mousePressed(java.awt.event.MouseEvent)
+comment2.params=user
+comment2.target=void\ addUser(User)
+comment3.params=user
+comment3.target=void\ removeUser(User)
+comment4.params=node\ user
+comment4.target=void\ getNewTreeSelect(javax.swing.tree.DefaultMutableTreeNode,\ User)
+comment5.params=node\ user
+comment5.target=javax.swing.tree.DefaultMutableTreeNode\ getUserParent(javax.swing.tree.DefaultMutableTreeNode,\ User)
+comment6.params=node
+comment6.target=void\ nodeDoubleClick(javax.swing.tree.DefaultMutableTreeNode)
+comment6.text=\r\n\ \ \ \ public\ void\ valueChanged(TreeSelectionEvent\ e)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ try\ {\r\n\ \ \ \ \ \ \ \ DefaultMutableTreeNode\ node\ \=\ (DefaultMutableTreeNode)\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.getLastSelectedPathComponent();\r\n\ \ \ \ \ \ \ \ if(node\ \=\=\ null)\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ return;\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ if(node.getUserObject()\ instanceof\ User)\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ node.removeAllChildren();\r\n\ \ \ \ \ \ \ \ \ \ \ \ populateTree(node);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ else\ if(node.getUserObject()\ instanceof\ SharedFile)\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ System.out.println("wwwwwwwwww");\r\n\ \ \ \ \ \ \ \ \ \ \ \ getFile((SharedFile)\ node.getUserObject());\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ }\r\n\ \ \ \ catch\ (Exception\ excep)\ {\r\n\ \ \ \ \ \ \ \ System.err.println(excep);\r\n\ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \r\n\ \ \ }\r\n
+comment7.params=file
+comment7.target=void\ getFile(SharedFile)
+comment8.params=file
+comment8.target=void\ getDir(SharedFile)
+comment9.params=node
+comment9.target=void\ populateTree(javax.swing.tree.DefaultMutableTreeNode)
+numComments=12

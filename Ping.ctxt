@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=ip\ port
+comment0.target=boolean\ ping(java.lang.String,\ int)
+comment1.params=ip\ port\ timeout
+comment1.target=boolean\ ping(java.lang.String,\ int,\ int)
+numComments=2

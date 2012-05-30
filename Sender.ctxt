@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=in\ socket\ file\ inter\ handle
+comment0.target=Sender(java.io.InputStream,\ java.net.Socket,\ SharedFile,\ ShareInterface,\ ShareHandle)
+comment1.params=
+comment1.target=void\ run()
+comment2.params=amountDLed
+comment2.target=void\ tick(double)
+comment3.params=
+comment3.target=void\ end()
+numComments=4

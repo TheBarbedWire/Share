@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=ip\ alias
+comment0.target=User(java.lang.String,\ java.lang.String)
+comment1.params=alias
+comment1.target=User(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getIP()
+comment3.params=
+comment3.target=java.lang.String\ getAlias()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment5.params=alias
+comment5.target=void\ setAlias(java.lang.String)
+comment6.params=
+comment6.target=FileList\ getFileList()
+comment7.params=fList
+comment7.target=void\ setFileList(FileList)
+numComments=8

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=port\ inter
+comment0.target=Listener(int,\ ShareInterface)
+comment1.params=port\ threadName\ inter
+comment1.target=Listener(int,\ java.lang.String,\ ShareInterface)
+comment2.params=
+comment2.target=void\ run()
+comment3.params=
+comment3.target=void\ stopListener()
+comment4.params=
+comment4.target=void\ listen()
+comment5.params=socket\ reader\ writer
+comment5.target=void\ connection(java.net.Socket,\ java.io.BufferedReader,\ java.io.PrintWriter)
+numComments=6

@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=port\ IP\ interval\ servCon\ inter
+comment0.target=ServerPinger(int,\ java.lang.String,\ int,\ ServerConnect,\ ShareInterface)
+comment1.params=
+comment1.target=void\ pingFailed()
+numComments=2

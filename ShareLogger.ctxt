@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=name
+comment0.target=ShareLogger(java.lang.String)
+comment1.params=name\ logPath
+comment1.target=ShareLogger(java.lang.String,\ java.lang.String)
+comment2.params=entry
+comment2.target=void\ addEntry(java.lang.String)
+comment3.params=entry\ tm
+comment3.target=void\ log(java.lang.String,\ java.lang.String)
+comment4.params=
+comment4.target=java.lang.String[]\ getLog()
+comment5.params=logPath
+comment5.target=void\ fileLoggingOn(java.lang.String)
+comment6.params=out
+comment6.target=void\ streamLoggingOn(java.io.PrintStream)
+comment7.params=
+comment7.target=void\ fileLoggingOff()
+comment8.params=
+comment8.target=void\ outputLogToStream()
+comment9.params=
+comment9.target=void\ createLogFile()
+numComments=10
