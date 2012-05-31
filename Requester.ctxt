@@ -1,8 +1,10 @@
 #BlueJ class context
-comment0.params=ip\ port\ outFile\ file\ inter\ handle
-comment0.target=Requester(java.lang.String,\ int,\ java.io.File,\ SharedFile,\ ShareInterface,\ ShareHandle)
+comment0.params=ip\ port\ outFile\ tempFile\ file\ inter\ handle
+comment0.target=Requester(java.lang.String,\ int,\ java.io.File,\ java.io.File,\ SharedFile,\ ShareInterface,\ ShareHandle)
 comment1.params=ip\ port\ fileType\ outFile
 comment1.target=Requester(java.lang.String,\ int,\ int,\ java.io.File)
+comment10.params=
+comment10.target=void\ end()
 comment2.params=ip\ port\ fileType\ outFile\ user
 comment2.target=Requester(java.lang.String,\ int,\ int,\ java.io.File,\ User)
 comment3.params=
@@ -15,8 +17,8 @@ comment6.params=out
 comment6.target=void\ receiveFile(java.io.OutputStream)
 comment7.params=checkSum
 comment7.target=void\ generateMD5(byte[])
-comment8.params=amountDLed
-comment8.target=void\ tick(double)
-comment9.params=
-comment9.target=void\ end()
-numComments=10
+comment8.params=
+comment8.target=boolean\ checkMD5()
+comment9.params=amountDLed
+comment9.target=void\ tick(double)
+numComments=11

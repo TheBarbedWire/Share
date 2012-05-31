@@ -4,6 +4,7 @@ import java.security.MessageDigest;
 
 public class Requester extends Thread
 {
+    private static String TEMP_EXT = ".tmp";
     
     private int port;
     private String ip;
@@ -14,6 +15,7 @@ public class Requester extends Thread
     private BufferedReader reader;
     private PrintWriter writer;
     private File outFile;
+    private File tempFile;
     private int fileType;
     private User user;
     private String md5;
@@ -25,12 +27,13 @@ public class Requester extends Thread
     private volatile Thread blinker;
     
   
-    public Requester(String ip, int port, File outFile, SharedFile file, ShareInterface inter, ShareHandle handle)
+    public Requester(String ip, int port, File outFile, File tempFile, SharedFile file, ShareInterface inter, ShareHandle handle)
     {
         this.port = port;
         this.ip = ip;
         this.filePath = file.getPath();
         this.outFile = outFile;
+        this.tempFile = tempFile;
         this.fileType = 0;
         this.file = file;
         this.inter = inter;
@@ -104,13 +107,30 @@ public class Requester extends Thread
         else if(!read.equals(Protocol.PROTOACCEPT)) {
             throw new ProtocolException("unexpected response");
         }
+        OutputStream stream;
         if(fileType == Protocol.FILE) {
             if(!sendPath()) return;
+            tempFile = new File(outFile.getName() + TEMP_EXT);
+            tempFile.createNewFile();  
+            stream = new FileOutputStream(tempFile);
         }
-        outFile.createNewFile();  
-        receiveFile(new FileOutputStream(outFile));
+        else {
+           stream = new FileOutputStream(outFile); 
+        }
+     
+        receiveFile(stream);   
         socket.close();
-        if(fileType == Protocol.FILELIST) {
+        if(fileType == Protocol.FILE) {
+            if(checkMD5()) {
+                if(!tempFile.renameTo(outFile)) {
+                    throw new ShareException("Unable to copy file to downloads directory");
+                }
+            }
+            else {
+                throw new ShareException("File checksum error");
+            }
+        }
+        else if(fileType == Protocol.FILELIST) {
             FileList filelist = new FileList(outFile, user);
             user.setFileList(filelist);
         }
@@ -165,6 +185,14 @@ public class Requester extends Thread
         for(int i = 0; i < checkSum.length; i++) {
             md5 += Integer.toString((checkSum[i] & 0xff) + 0x100, 16).substring(1);
         }
+    }
+    
+    private boolean checkMD5()
+    {
+        if(file.getMD5().equals(md5)) {
+            return true;
+        }
+        return false;
     }
     
     private void tick(double amountDLed)

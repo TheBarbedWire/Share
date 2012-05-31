@@ -20,6 +20,7 @@ public class Share
        this.setup = setup;
        this.inter = inter;
        createConfig();
+       createDirs();
        this.user = new User(config.getUserName());
        reqList = new ArrayList<Requester>();
        createUserList();
@@ -31,6 +32,27 @@ public class Share
     public void createConfig() throws Exception
     {
         config = new Config(setup.configPath);
+    }
+    
+    public void createDirs()
+    {
+        File downloads = new File(config.getDownloadPath());
+        File tempDownloads = new File(config.getTempDownloadPath());
+        File logs = new File(config.getLogPath());
+        File shares = new File(config.getDownloadPath());
+        
+        if(!downloads.exists()) {
+            downloads.mkdirs();
+        }
+        if(!tempDownloads.exists()) {
+            tempDownloads.mkdirs();
+        }
+        if(!logs.exists()) {
+            logs.mkdirs();
+        }
+        if(!shares.exists()) {
+            shares.mkdirs();
+        }
     }
     
     public ShareSetup getSetup()
@@ -128,11 +150,13 @@ public class Share
     public void setDownloadPath(String path) throws Exception
     {
         config.setDownloadPath(path);
+        createDirs();
     }
     
     public void setSharePath(String path) throws Exception
     {
         config.setSharePath(path);
+        createDirs();
     }
     
     public void setAutoConnect(Boolean bool) throws Exception
@@ -153,6 +177,11 @@ public class Share
     public String getDownloadPath()
     {
         return config.getDownloadPath();
+    }
+    
+    public String getTempDownloadPath()
+    {
+        return config.getTempDownloadPath();
     }
     
     public Boolean getAutoConnect()
@@ -178,7 +207,7 @@ public class Share
             return;
         }
         ShareHandle handle = new ShareHandle(file.toString());
-        Requester requester = new Requester(file.getUser().getIP(), setup.FTport, new SharedFile(config.getDownloadPath() + file.getPath()), file, inter, handle);
+        Requester requester = new Requester(file.getUser().getIP(), setup.FTport, new SharedFile(config.getDownloadPath() + file.getPath()), new SharedFile(config.getTempDownloadPath() + file.getPath()), file, inter, handle);
         inter.newDownload(handle);
         reqList.add(requester);
         requester.start();
